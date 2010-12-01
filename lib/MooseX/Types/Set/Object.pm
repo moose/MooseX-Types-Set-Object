@@ -18,7 +18,7 @@ coerce ArrayRef,
     from "Set::Object",
     via { $_->members };
 
-__PACKAGE__
+1;
 
 =head1 SYNOPSIS
 
