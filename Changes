@@ -1,0 +1,4 @@
+
+{{NEXT}}
+    * The test suite now uses Test::Fatal instead of Test::Exception (Karen
+      Etheridge).
