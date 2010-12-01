@@ -29,6 +29,12 @@ use ok 'MooseX::Types::Set::Object';
         coerce => 1,
     );
 
+    has moo => (
+        isa    => 'ArrayRef',
+        is     => 'rw',
+        coerce => 1,
+    );
+
     package Foo;
     use Moose;
 
@@ -70,12 +76,12 @@ lives_ok { Blah->new( misc => Set::Object->new ) } "doesn't fail with empty set 
 
 throws_ok { Blah->new( misc => \@objs ) } qr/Foo/, "fails on parametrized set type";
 
-throws_ok { Blah->new( misc => Set::Object->new(\@objs) ) } qr/Foo/, "fails on parametrized set type";
+throws_ok { Blah->new( misc => Set::Object->new(@objs) ) } qr/Foo/, "fails on parametrized set type";
 
 {
     local $TODO = "coercion for parametrized types seems borked";
     lives_ok { Blah->new( misc => [ Foo->new, Bar->new ] ) } "no error on coercion from array filled with the right type";
 }
 
-lives_ok { Blah->new( misc => Set::Object->new([ Foo->new, Bar->new ]) ) } "no error with set filled with the right type";
-throws_ok { Blah->new( misc => Set::Object->new([ Foo->new, Gorch->new, Bar->new ]) ) } qr/Foo/, "error with set that has a naughty object";
+lives_ok { Blah->new( misc => Set::Object->new(Foo->new, Bar->new) ) } "no error with set filled with the right type";
+throws_ok { Blah->new( misc => Set::Object->new(Foo->new, Gorch->new, Bar->new) ) } qr/Foo/, "error with set that has a naughty object";

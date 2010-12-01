@@ -16,7 +16,7 @@ coerce "Set::Object",
 
 coerce ArrayRef,
     from "Set::Object",
-    via { $_->members };
+    via { [$_->members] };
 
 1;
 
