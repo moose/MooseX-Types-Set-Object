@@ -68,18 +68,18 @@ like( exception { Blah->new( junk => \@objs ) }, qr/type.*Set::Object/i, "fails 
 
 
 {
-    local $TODO = "coercion for parametrized types seems borked";
-    is( exception { Blah->new( misc => [ ] ) }, undef, "doesn't fail with empty array for parametrized set type");
+    local $TODO = "coercion for parameterized types seems borked";
+    is( exception { Blah->new( misc => [ ] ) }, undef, "doesn't fail with empty array for parameterized set type");
 }
 
-is( exception { Blah->new( misc => Set::Object->new ) }, undef, "doesn't fail with empty set for parametrized set type");
+is( exception { Blah->new( misc => Set::Object->new ) }, undef, "doesn't fail with empty set for parameterized set type");
 
-like( exception { Blah->new( misc => \@objs ) }, qr/Foo/, "fails on parametrized set type");
+like( exception { Blah->new( misc => \@objs ) }, qr/Foo/, "fails on parameterized set type");
 
-like( exception { Blah->new( misc => Set::Object->new(@objs) ) }, qr/Foo/, "fails on parametrized set type");
+like( exception { Blah->new( misc => Set::Object->new(@objs) ) }, qr/Foo/, "fails on parameterized set type");
 
 {
-    local $TODO = "coercion for parametrized types seems borked";
+    local $TODO = "coercion for parameterized types seems borked";
     is( exception { Blah->new( misc => [ Foo->new, Bar->new ] ) }, undef, "no error on coercion from array filled with the right type");
 }
 
