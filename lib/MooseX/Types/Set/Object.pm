@@ -1,16 +1,12 @@
 package MooseX::Types::Set::Object;
 # ABSTRACT: Set::Object type with coercions and stuff.
 
-use base qw(MooseX::Types::Base);
-
-use strict;
-use warnings;
-
-use Set::Object ();
-use Scalar::Util ();
 
 use MooseX::Types;
 use MooseX::Types::Moose qw(Object ArrayRef);
+
+use Set::Object ();
+use Scalar::Util ();
 
 class_type "Set::Object"; # FIXME parametrizable
 
