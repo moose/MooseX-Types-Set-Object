@@ -1,12 +1,9 @@
 package MooseX::Types::Set::Object;
 # ABSTRACT: Set::Object type with coercions and stuff.
 
-
 use MooseX::Types;
 use MooseX::Types::Moose qw(Object ArrayRef);
-
 use Set::Object ();
-use Scalar::Util ();
 
 class_type "Set::Object"; # FIXME not parameterizable
 
