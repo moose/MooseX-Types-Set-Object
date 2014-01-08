@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More 'no_plan';
+use Test::More 0.88;
 use Test::Fatal;
 
 use ok 'MooseX::Types::Set::Object';
@@ -83,3 +83,5 @@ like( exception { Blah->new( misc => Set::Object->new(@objs) ) }, qr/Foo/, "fail
 
 is( exception { Blah->new( misc => Set::Object->new(Foo->new, Bar->new) ) }, undef, "no error with set filled with the right type");
 like( exception { Blah->new( misc => Set::Object->new(Foo->new, Gorch->new, Bar->new) ) }, qr/Foo/, "error with set that has a naughty object");
+
+done_testing;
