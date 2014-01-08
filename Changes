@@ -1,4 +1,12 @@
-0.03  Wed, 01 Dec 2010 19:42:04 +0100
-    * Make coercions to ArrayRef work (Closes RT#60604) (Florian Ragwitz).
-    * The test suite now uses Test::Fatal instead of Test::Exception (Karen
-      Etheridge).
+Revision history for {{$dist->name}}
+
+{{$NEXT}}
+
+0.03      2010-12-01 18:42:04Z
+          - Make coercions to ArrayRef work (Closes RT#60604) (Florian Ragwitz).
+          - The test suite now uses Test::Fatal instead of Test::Exception (Karen
+            Etheridge).
+
+0.02      2008-06-26
+
+0.01      2008-01-09
