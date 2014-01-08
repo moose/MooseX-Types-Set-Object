@@ -44,8 +44,11 @@ coerce ArrayRef,
 
 =head1 DESCRIPTION
 
-This module provides Moose type constraints (see
+This module provides a Moose type constraint (see
 L<Moose::Util::TypeConstraints>, L<MooseX::Types>).
+Note that this constraint and its coercions are B<global>, not simply limited to the scope that
+imported it -- in this way it acts like a regular L<Moose> type constraint,
+rather than one from L<MooseX::Types>.
 
 =head1 TYPES
 
