@@ -8,7 +8,7 @@ use MooseX::Types::Moose qw(Object ArrayRef);
 use Set::Object ();
 use Scalar::Util ();
 
-class_type "Set::Object"; # FIXME parameterizable
+class_type "Set::Object"; # FIXME not parameterizable
 
 coerce "Set::Object",
     from ArrayRef,

@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          - fixed tests that now break in Moose 2.1200
 
 0.03      2010-12-01 18:42:04Z
           - Make coercions to ArrayRef work (Closes RT#60604) (Florian Ragwitz).
