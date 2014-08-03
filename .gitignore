@@ -1,4 +1,6 @@
-.*
-!.gitignore
-MooseX-Types-Set-Object-*
-Debian_CPANTS.txt
+/.ackrc
+/.build/
+!/.gitignore
+/.latest
+/MooseX-Types-Set-Object-*/
+/MooseX-Types-Set-Object-*.tar.gz
