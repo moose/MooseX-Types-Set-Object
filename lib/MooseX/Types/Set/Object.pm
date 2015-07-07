@@ -6,6 +6,7 @@ our $VERSION = '0.05';
 use MooseX::Types;
 use MooseX::Types::Moose qw(Object ArrayRef);
 use Set::Object ();
+use if MooseX::Types->VERSION >= 0.42, 'namespace::autoclean';
 
 class_type "Set::Object"; # FIXME not parameterizable
 
