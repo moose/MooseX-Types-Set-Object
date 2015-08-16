@@ -1,7 +1,7 @@
 package MooseX::Types::Set::Object;
 # ABSTRACT: Set::Object type with coercions and stuff.
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 use MooseX::Types;
 use MooseX::Types::Moose qw(Object ArrayRef);
