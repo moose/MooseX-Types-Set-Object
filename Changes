@@ -1,6 +1,7 @@
 Revision history for MooseX-Types-Set-Object
 
 {{$NEXT}}
+          - update some distribution tooling
 
 0.04      2014-01-11 19:28:18Z
           - fixed tests that now break in Moose 2.1200
